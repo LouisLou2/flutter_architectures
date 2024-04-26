@@ -1,0 +1,6 @@
+这里的repository规定了数据如何存，如何取，是一些抽象出来的接口，具体的实现在具体的datasource中
+ * 例如这里的UserRepository，是一个接口，具体的实现在UserRepositoryImpl中
+ * 这样做的好处是，当我们需要更换数据存储方式的时候，只需要更换具体的实现类即可，不需要改动其他代码
+ */
+datasource才真正的实现了数据的存储和取出，是真正的数据存储的地方，他可能是数据库，也可能是文件，也可能是缓存，还可能是远程服务器
+例如这里的UserDataSource，是一个接口，具体的实现在UserDataSourceImpl中。总而言之，datasource是repository的具体实现
